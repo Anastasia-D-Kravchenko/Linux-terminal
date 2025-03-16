@@ -1,0 +1,2 @@
+# sop
+ Linux terminal

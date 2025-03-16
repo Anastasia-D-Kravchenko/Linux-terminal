@@ -1,12 +1,21 @@
 # 1. Create "SOP" directory in your home directory.
 mkdir ~/SOP
+#OR
+mkdir -p "$HOME/SOP"
 
 # 2. Go to "SOP" directory and create "Class1" directory.
 cd ~/SOP
 mkdir Class1
+#OR
+pushd "$HOME/SOP" > /dev/null
+mkdir -p Class1
+pushd "$HOME/SOP" > /dev/null
+mkdir -p Class1
 
 # 3. Go back to your home directory and directly, with one command, go to the "Class1" directory.
 cd ~/SOP/Class1
+#OR
+pushd "$HOME/SOP/Class1" > /dev/null
 
 # 4. Create two files, "File1.txt" and "File2.txt".
 touch File1.txt File2.txt
@@ -19,6 +28,10 @@ ls -l File2.txt
 
 # 6. Go to your home directory and list all directories together with their content.
 cd ~
+tree
+#OR
+popd > /dev/null
+popd > /dev/null
 tree
 
 # 7. Check the manual of the nano and cat commands. Then write to file "File1.txt" text "Hello Linux", then display it.
@@ -43,6 +56,10 @@ echo "Line 13" >> ~/SOP/Class1/File1.txt
 echo "Line 14" >> ~/SOP/Class1/File1.txt
 echo "Line 15" >> ~/SOP/Class1/File1.txt
 echo "Line 16" >> ~/SOP/Class1/File1.txt
+#OR
+for i in {2..16}; do
+  echo "Line $i" >> "$HOME/SOP/Class1/File1.txt"
+done
 
 # 9. Display sorted content of the file "File1.txt".
 sort ~/SOP/Class1/File1.txt

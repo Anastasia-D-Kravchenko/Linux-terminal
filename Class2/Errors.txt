@@ -1,0 +1,5 @@
+cat: fo: No such file or directory
+-shell: lsd: command not found
+-shell: ifconfig: command not found
+-shell: sudo: command not found
+-shell: cart: command not found

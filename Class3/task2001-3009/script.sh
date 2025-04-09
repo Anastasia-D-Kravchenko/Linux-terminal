@@ -1,20 +1,20 @@
-#!/bin/bash
+n/bash#!/bi
 
-for i in {0..9}; do
-	touch "$i"
-done
+{0..9}; dofor i in 
+h "$i"	touc
+nedo
 
-name=""
+e=""nam
 
-for i in $(ls); do
-	name+="$i_"
-done
+$(ls); dofor i in 
+="$i_"	name+
+nedo
  
-echo $name > all_files.txt
-cat all_files.txt
+all_files.txtecho $name > 
+files.txtcat all_
 
-ls -R
+ -Rls
 
-rm -f {0..9} all_files.txt
+all_files.txtrm -f {0..9} 
 
-ls -l
+ -lls
